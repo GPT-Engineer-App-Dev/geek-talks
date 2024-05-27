@@ -1,5 +1,6 @@
 import { Box, Container, Flex, Heading, Text, VStack, HStack, Link, Divider } from "@chakra-ui/react";
-import { FaHome, FaTags, FaInfoCircle, FaEnvelope } from "react-icons/fa";
+import { FaHome, FaTags, FaInfoCircle, FaEnvelope, FaUserPlus } from "react-icons/fa";
+import { Link as RouterLink } from "react-router-dom";
 
 const threads = [
   { title: "How to learn React?", author: "John Doe", snippet: "I'm new to React and looking for resources to get started..." },
@@ -29,6 +30,10 @@ const Index = () => {
           <Link href="#" display="flex" alignItems="center">
             <FaEnvelope />
             <Text ml={2}>Contact</Text>
+          </Link>
+          <Link as={RouterLink} to="/register" display="flex" alignItems="center">
+            <FaUserPlus />
+            <Text ml={2}>Register</Text>
           </Link>
         </HStack>
       </Flex>
